@@ -47,7 +47,7 @@ class CommentaarsController < ApplicationController
     respond_to do |format|
       if @commentaar.save
         flash[:notice] = 'Commentaar was successfully created.'
-        format.html { redirect_to(@commentaar) }
+        format.html { redirect_to :back }
         format.xml  { render :xml => @commentaar, :status => :created, :location => @commentaar }
       else
         format.html { render :action => "new" }

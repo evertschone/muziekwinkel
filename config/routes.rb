@@ -32,7 +32,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :albums,      :has_many => [:nummers, :commentaars]
   map.resources :klants,      :has_many => :aankoops
   map.resources :medewerkers, :has_many => :aankoops
-
+  map.resources :commentaars
   map.root :controller => "home"
   # The priority is based upon order of creation: first created -> highest priority.
 
